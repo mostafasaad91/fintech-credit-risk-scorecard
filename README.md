@@ -61,11 +61,11 @@ Probabilities of Default ($PD$) are mapped to a standard **300–850 Consumer Cr
 
 | Exploratory IV & Delinquency EDA | ROC, KS & Calibration |
 |---|---|
-| ![EDA](outputs/figures/01_credit_eda_iv.png) | ![ROC KS](outputs/figures/02_scorecard_roc_ks.png) |
+| ![EDA](outputs/figures/01_credit_risk_eda_iv.png) | ![ROC KS](outputs/figures/02_scorecard_roc_ks.png) |
 
 | SHAP Credit Drivers | Basel Expected Loss & Lift |
 |---|---|
-| ![SHAP](outputs/figures/03_credit_shap_drivers.png) | ![Expected Loss](outputs/figures/04_expected_loss_and_lift.png) |
+| ![SHAP](outputs/figures/03_credit_shap_drivers.png) | ![Expected Loss](outputs/figures/04_expected_loss_deciles.png) |
 
 ---
 
@@ -80,7 +80,7 @@ fintech-credit-risk-scorecard/
 ├── docs/PROJECT_STORY.md                      # Full Bilingual (EN + AR) Story: Why, How & Engineering Challenges
 ├── outputs/
 │   ├── metrics.json                           # Complete verified metrics, deciles, tiers & slice audit
-│   ├── credit_scorecard_test_scored.csv       # Scored 6,000-client held-out portfolio with 300-850 scores & EL
+│   ├── high_risk_watchlist.csv                # Scored high-risk held-out watchlist with 300-850 scores & EL
 │   └── figures/                               # 4 publication-grade AMOLED PNG charts
 └── requirements.txt
 ```
