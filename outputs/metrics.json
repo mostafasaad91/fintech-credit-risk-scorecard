@@ -1,0 +1,238 @@
+{
+  "dataset": "UCI Taiwan Credit Card Default (30,000 Real Bank Clients)",
+  "qa_summary": {
+    "total_clients": 30000.0,
+    "undocumented_education_codes": 345.0,
+    "undocumented_marriage_codes": 54.0,
+    "over_limit_clients_m1": 2115.0,
+    "total_defaults": 6636.0,
+    "default_rate_pct": 22.12
+  },
+  "splits": {
+    "train": 18000,
+    "val": 6000,
+    "test": 6000
+  },
+  "top_iv_features": [
+    {
+      "feature": "months_delinquent_6m",
+      "iv": 0.8879
+    },
+    {
+      "feature": "PAY_0",
+      "iv": 0.8226
+    },
+    {
+      "feature": "max_delay_6m",
+      "iv": 0.7459
+    },
+    {
+      "feature": "PAY_2",
+      "iv": 0.4891
+    },
+    {
+      "feature": "PAY_3",
+      "iv": 0.3812
+    },
+    {
+      "feature": "PAY_4",
+      "iv": 0.3406
+    },
+    {
+      "feature": "zero_pay_months",
+      "iv": 0.2824
+    },
+    {
+      "feature": "PAY_5",
+      "iv": 0.262
+    },
+    {
+      "feature": "delay_trend_6m",
+      "iv": 0.2495
+    },
+    {
+      "feature": "PAY_6",
+      "iv": 0.2368
+    }
+  ],
+  "models": {
+    "Naive Baseline": {
+      "cv_roc_auc_mean": 0.5,
+      "val_roc_auc": 0.5,
+      "test_roc_auc": 0.5,
+      "test_roc_auc_ci95": [
+        0.5,
+        0.5
+      ],
+      "test_gini": 0.0,
+      "test_ks": 0.0,
+      "test_pr_auc": 0.2212,
+      "test_brier": 0.2212
+    },
+    "Logistic Scorecard": {
+      "cv_roc_auc_mean": 0.7624,
+      "val_roc_auc": 0.757,
+      "test_roc_auc": 0.7452,
+      "test_roc_auc_ci95": [
+        0.7296,
+        0.7625
+      ],
+      "test_gini": 0.4905,
+      "test_ks": 0.3902,
+      "test_pr_auc": 0.5027,
+      "test_brier": 0.1423
+    },
+    "Random Forest": {
+      "cv_roc_auc_mean": 0.7878,
+      "val_roc_auc": 0.7849,
+      "test_roc_auc": 0.7807,
+      "test_roc_auc_ci95": [
+        0.7665,
+        0.7971
+      ],
+      "test_gini": 0.5615,
+      "test_ks": 0.4214,
+      "test_pr_auc": 0.566,
+      "test_brier": 0.1346
+    },
+    "LightGBM": {
+      "cv_roc_auc_mean": 0.7884,
+      "val_roc_auc": 0.7885,
+      "test_roc_auc": 0.7818,
+      "test_roc_auc_ci95": [
+        0.7678,
+        0.7973
+      ],
+      "test_gini": 0.5637,
+      "test_ks": 0.4293,
+      "test_pr_auc": 0.5655,
+      "test_brier": 0.1344
+    },
+    "XGBoost": {
+      "cv_roc_auc_mean": 0.7878,
+      "val_roc_auc": 0.788,
+      "test_roc_auc": 0.7847,
+      "test_roc_auc_ci95": [
+        0.7707,
+        0.8005
+      ],
+      "test_gini": 0.5695,
+      "test_ks": 0.4353,
+      "test_pr_auc": 0.5695,
+      "test_brier": 0.1337
+    }
+  },
+  "selected_model": "LightGBM",
+  "top2_deciles_default_capture_pct": 50.9,
+  "total_test_expected_loss_ntd_m": 29.62,
+  "risk_tiers": [
+    {
+      "risk_tier": "High-Risk (<540)",
+      "clients": 1283,
+      "actual_default_pct": 54.64,
+      "avg_pd_pct": 55.65,
+      "total_ead_m": 60.28,
+      "expected_loss_m": 16.58
+    },
+    {
+      "risk_tier": "Subprime (540-620)",
+      "clients": 2125,
+      "actual_default_pct": 19.67,
+      "avg_pd_pct": 19.4,
+      "total_ead_m": 90.41,
+      "expected_loss_m": 7.63
+    },
+    {
+      "risk_tier": "Near-Prime (620-700)",
+      "clients": 2004,
+      "actual_default_pct": 9.48,
+      "avg_pd_pct": 8.79,
+      "total_ead_m": 122.56,
+      "expected_loss_m": 4.84
+    },
+    {
+      "risk_tier": "Prime (700+)",
+      "clients": 588,
+      "actual_default_pct": 3.06,
+      "avg_pd_pct": 3.52,
+      "total_ead_m": 37.12,
+      "expected_loss_m": 0.58
+    }
+  ],
+  "slice_audit_age": [
+    {
+      "age_band": "21-29",
+      "n": 1912,
+      "actual_default_pct": 22.33,
+      "roc_auc": 0.786
+    },
+    {
+      "age_band": "30-39",
+      "n": 2198,
+      "actual_default_pct": 20.61,
+      "roc_auc": 0.7877
+    },
+    {
+      "age_band": "40-49",
+      "n": 1341,
+      "actual_default_pct": 23.27,
+      "roc_auc": 0.7707
+    },
+    {
+      "age_band": "50+",
+      "n": 549,
+      "actual_default_pct": 24.59,
+      "roc_auc": 0.7723
+    }
+  ],
+  "top_shap_features": [
+    {
+      "feature": "max_delay_6m",
+      "mean_abs_shap": 0.2755
+    },
+    {
+      "feature": "PAY_0",
+      "mean_abs_shap": 0.2422
+    },
+    {
+      "feature": "months_delinquent_6m",
+      "mean_abs_shap": 0.2273
+    },
+    {
+      "feature": "BILL_AMT1",
+      "mean_abs_shap": 0.1582
+    },
+    {
+      "feature": "log_limit_bal",
+      "mean_abs_shap": 0.1306
+    },
+    {
+      "feature": "zero_pay_months",
+      "mean_abs_shap": 0.12
+    },
+    {
+      "feature": "avg_util_6m",
+      "mean_abs_shap": 0.1048
+    },
+    {
+      "feature": "PAY_AMT1",
+      "mean_abs_shap": 0.101
+    },
+    {
+      "feature": "PAY_AMT2",
+      "mean_abs_shap": 0.0934
+    },
+    {
+      "feature": "max_util_6m",
+      "mean_abs_shap": 0.0665
+    },
+    {
+      "feature": "util_m1",
+      "mean_abs_shap": 0.0633
+    },
+    {
+      "feature": "pay_to_bill_6m",
+      "mean_abs_shap": 0.0474
+    }
+  ]
+}
