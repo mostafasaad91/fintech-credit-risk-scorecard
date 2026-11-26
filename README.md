@@ -1,5 +1,10 @@
 # FinTech Credit Risk Scorecard & Basel Expected Loss Engine
 
+[![Pipeline CI](https://github.com/mostafasaad91/fintech-credit-risk-scorecard/actions/workflows/ci.yml/badge.svg)](https://github.com/mostafasaad91/fintech-credit-risk-scorecard/actions/workflows/ci.yml)
+![Python 3.11](https://img.shields.io/badge/Python-3.11-00E5FF?style=flat-square&logo=python&logoColor=white)
+![KS 0.429](https://img.shields.io/badge/KS%20Statistic-0.4293-8B5CF6?style=flat-square)
+![Basel III EL](https://img.shields.io/badge/Basel%20EL-NT%2429.62M-10B981?style=flat-square)
+
 > **End-to-End Business ML & Credit Risk Pipeline** — SQLite Credit Data Mart · WoE/IV Scorecard Feature Audit · Logistic vs LightGBM vs XGBoost Benchmark · KS / Gini / Calibration Validation · Basel Expected Loss ($EL = PD \times LGD \times EAD$) · SHAP Explainability on **30,000 Real Taiwanese Bank Clients** (UCI / OpenML Credit Card Default Dataset).
 
 ![Scorecard ROC, KS Statistic & Calibration](outputs/figures/02_scorecard_roc_ks.png)
