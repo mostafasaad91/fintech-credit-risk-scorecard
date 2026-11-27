@@ -1,4 +1,4 @@
-# FinTech Credit Risk Scorecard & Basel Expected Loss Engine
+# FinTech Credit Risk — Basel III Scorecard & Expected Loss Engine
 
 [![Pipeline CI](https://github.com/mostafasaad91/fintech-credit-risk-scorecard/actions/workflows/ci.yml/badge.svg)](https://github.com/mostafasaad91/fintech-credit-risk-scorecard/actions/workflows/ci.yml)
 ![Python 3.11](https://img.shields.io/badge/Python-3.11-00E5FF?style=flat-square&logo=python&logoColor=white)

@@ -1,4 +1,4 @@
-# Project Story — FinTech Credit Risk Scorecard & Basel Expected Loss Engine
+# Project Story — FinTech Credit Risk — Basel III Scorecard & Expected Loss Engine
 ## قصة بناء المشروع: ليه عملناه، إزاي اتبنى، وإيه الأسئلة والتحديات اللي واجهتنا؟
 
 ---
